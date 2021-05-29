@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .form {
+        width: 300px;
+        margin: 60px auto 30px;
+        padding: 10px;
+        position: relative;
+      }
+      .centr {
+        position:absolute;
+       
+        left:40%;
+        top:20%;
+       
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+      <div class="centr">
+    <form name="form" onsubmit="return validate()">
+      <p>Registration</p>
+      <p class="field">
+        <input type="text" id="login" name="name" placeholder="Name">
+        <span style="color:red" id="x" class="red"></span>
+      </p>
+      <p class="field">
+        <input type="surname" id="surname" name="surname" placeholder="Surname">
+        <span style="color:red" id="y" class="red"></span>
+      </p>
+      <p class="field">
+        <input type="password" id="password" name="password" placeholder="Password">
+        <span style="color:red" id="a"></span>
+      </p>
+      <p class="field">
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
+        <span style="color:red" id="b"></span>  
+    </p>
+      <p class="field">
+        <input type="text" id="email" name="email" placeholder="Email">
+        <span style="color:red" id="u"></span>
+      </p>
+
+      <p class="submit">
+        <input id="submit" type="submit" value="Sign Up">
+        <input type="reset" value="Clear">
+
+      </p>
+    </form>
+</div>
+    <script src="../js/i2.js"></script>
+  </body>
+</html>
