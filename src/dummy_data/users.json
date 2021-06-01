@@ -1,0 +1,9 @@
+[
+    {
+        "name": "admin", "email": "admin@mail.ru", "password": 1234567, "role": "admin"
+    },
+
+    {
+    "name": "user@mail.ru", "password": 1234567, "role": "user"
+    }
+]

@@ -1,4 +1,5 @@
 let list = document.querySelector(".posts");
+var myNode = document.querySelector(".foo");
 let button = document.querySelector("#button1");
 let button2 = document.querySelector("#button2");
 let button3 = document.querySelector("#button3");
@@ -35,6 +36,12 @@ async function getResponce() {
 
   results = [].concat(result, isGanres, isGanres2, isGanres3);
 console.log(results);
+
+
+
+
+
+
 let i;
 /*let l = results['i'].id;
 results.forEach(function(elem) { // проходим все элементы коллекции
@@ -76,7 +83,7 @@ results.forEach(function(item, index){
  let k = results[index];
   let h = `${item.poster_path}`;
 //  results.addEventListener('click', function() {
-   console.log( k, `Индекс: ${index}, элемент: ${item.id}, ${item.poster_path}`);
+  // console.log( k, `Индекс: ${index}, элемент: ${item.id}, ${item.poster_path}`);
    //})
   
 
@@ -91,7 +98,7 @@ results.forEach(function(item, index){
 //for (let i = 0; i < results.length; i++) {
 for (var key in results) {
 let m = results[key].poster_path;
-console.log(m);
+//console.log(m);
 }
 for (index = 0; index < results.length; index++) {
   for (var key in results) {
@@ -104,7 +111,7 @@ for (index = 0; index < results.length; index++) {
 //}
 
 //for (let i = 0; i < results.length; i++) {
-  let t = document.querySelector('.posts');
+  /*let t = document.querySelector('.posts');
   t.addEventListener('click', ()=>{
     console.log('1');
     for (var key in results) {
@@ -116,7 +123,7 @@ for (index = 0; index < results.length; index++) {
       console.log(getOne);
       }
     }
-    });
+    });*/
  // console.log(button.i)
  // button.addEventListener('click', function (event) {
   //  console.log('click');
@@ -165,24 +172,47 @@ let elemen = [...document.getElementsByClassName('img')].forEach(item => {
 
       let key;
       let li = document.createElement("li");
+      li.classList.add("foo");
+      li.id="foo";
       list.appendChild(li);
       for (key in notes) {
         li.innerHTML += `
-            <div class = "wrap">
+            <div id = "wr" class = "wrap">
             <img class="img" src="https://image.tmdb.org/t/p/w500/${notes[key].poster_path}"
             <br>
             <h4> ${notes[key].title}</h4>
+            <button name="del"    class="but"><img class= "rubbish" src='../img/мусорка.png'> </button>
             </div>
+            
+            
             `;
       }
     };
   })();
+
+
+
+
+
+
+
+
+   
+    results.forEach(function(i){
+        let button5 = document.getElementsByClassName('but');
+        button5.onclick='deleteElem(${i})';
+        const deleteElem = index =>{    
+            results.splice(index,1);
+        }
+    });
+  
   showPage(items[0]);
   for (let item of items) {
     item.addEventListener("click", function () {
       showPage(this);
     });
   }
+  
 }
 getResponce();
 async function getResponce2() {
@@ -247,6 +277,7 @@ async function getResponce2() {
             <br>
             <h4> ${notes[key].title}</h4>
             </div>
+            <a href = "" class="rubbish"><img class= "rubbish" src='../img/мусорка.png'> </a>
             `;
       }
     };
@@ -321,6 +352,7 @@ async function getResponce3() {
             <br>
             <h4> ${notes[key].title}</h4>
             </div>
+            <a href = "" class="rubbish"><img class= "rubbish" src='../img/мусорка.png'> </a>
             `;
       }
     };
@@ -395,6 +427,7 @@ async function getResponce4() {
             <br>
             <h4> ${notes[key].title}</h4>
             </div>
+            <a onclick = "remove ()" href = "" class="rubbish"><img class= "rubbish" src='../img/мусорка.png'> </a>
             `;
       }
     };
@@ -469,6 +502,7 @@ async function getResponce5() {
             <br>
             <h4> ${notes[key].title}</h4>
             </div>
+            <a href = "" class="rubbish"><img class= "rubbish" src='../img/мусорка.png'> </a>
             `;
       }
     };
@@ -498,4 +532,133 @@ let admin = {
 localStorage.setItem('user', JSON.stringify(user));
 localStorage.setItem('admin', JSON.stringify(admin));
 
-admin.say();
+//admin.say();
+
+
+let img = document.createElement("a");
+
+img.innerHTML="<img src='../img/мусорка.png'>"
+//parent.prepend(img);
+
+
+
+/*t.addEventListener('click', ()=>{   /////удаляем
+const deleteTask = index =>{ 
+   
+   this.t.splice(index,1);
+    }
+})*/
+
+
+
+  
+
+
+    /*function deleteElem() {
+        delete t.this
+       }
+
+       let parent = document.getElementsByClassName("wrap")
+       console.log(parent);
+       parent.addEventListener('click', function(e) {
+                  var dsf = e.target.parentNode;
+                  console.log(dsf);
+                  elem.removeChild(dsf);
+       });
+*/
+/*document.onclick = function( e ) {
+    var tag = e.target;
+    
+    if( tag.tagName == "IMG" ) {
+      tag.remove();
+  } }
+*/
+
+
+
+   //  liElems = myNode.innerHTML;
+  
+   /*var els = document.getElementsByName("del");
+   console.log(els)
+   els.forEach(function(item) {
+       item.addEventListener("click", function(){
+           item.parentNode.parentNode.removeChild(item.parentNode);
+       });
+   });*/
+  /* window.onload = function() {
+   var x = document.querySelectorAll(".wrap");
+   console.log(x)
+for(var i = 0; i < x.length; i++) {
+    console.log(x[i].querySelector(".rubbish"))
+  x[i].querySelector(".rubbish").onclick = registerClickHandler;
+}
+function registerClickHandler () {
+   this.parentNode.parentNode.removeChild(this.parentNode);
+
+}
+   }*/
+
+   /*window.onload = function() {
+let myblock = document.querySelectorAll('.wrap');
+console.log(myblock)
+myblock.forEach(block => block.addEventListener('click', removeBlock));
+
+function removeBlock() {
+  let block = this;
+  block.style.opacity = 1;
+  let blockId = setInterval(function() {
+    if (block.style.opacity > 0) block.style.opacity -= .1;
+    else {
+  	clearInterval(blockId);
+  	block.remove();
+    }
+  }, 60)
+}
+   }*/
+
+  
+
+/*
+  window.onload = function() {
+    var erase = document.getElementsByClassName('rubbish'); 
+        console.log(erase)
+        erase.forEach(item => {
+            item.onclick = (e) => {
+                const itemText = item.parentElement.textContent.substr(1);
+                results = results.filter(entry => entry.name !== itemText);
+                create();
+            }
+          });
+    }();
+*/
+/*
+    const erase = document.querySelectorAll('ul .li');
+    nodes = Array.from(erase)
+    console.log(erase);
+    var child_nodes = erase.childNodes;
+
+nodes.forEach(item => {
+    item.onclick = (e) => {
+      const itemText = item.parentElement.textContent.substr(1);
+      const itemPos = array.findIndex(item => item.name == itemText);
+    
+        console.log(itemText + ' ' + itemPos);
+        console.log(array);
+        array.splice(itemPos, 1);
+        
+        e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+       //create();
+    }
+});*/
+
+/*
+const addEventListeners = () => {
+    const erase = document.querySelectorAll('.but');
+    erase.forEach(item => {
+      item.onclick = (e) => {
+          const itemText = item.parentElement.textContent.substr(1);
+          array = array.filter(entry => entry.name !== itemText);
+          create();
+      }
+    });
+  }*/

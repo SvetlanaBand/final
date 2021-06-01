@@ -86,3 +86,9 @@ body {
 p {
   color: blueviolet;
 }
+.rubbish {
+  max-width: 30px;
+  max-height: 30px;
+  padding: 0px;
+  border: none;
+}

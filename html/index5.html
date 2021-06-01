@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .form {
+        width: 300px;
+        margin: 60px auto 30px;
+        padding: 10px;
+        position: relative;
+      }
+      .centr {
+        position:absolute;
+       
+        left:40%;
+        top:20%;
+       
+      }
+      #select {
+          width: 177px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+      <div class="centr">
+    <form name="form" onsubmit="return validate()">
+      <p class="field">
+        <input type="text" id="login" name="name" placeholder="title">
+        <span style="color:red" id="x" class="red"></span>
+      </p>
+      <p class="field">
+        <textarea rows="5" cols="22" type="surname" id="surname" name="surname" name="overview"> </textarea>
+        <span style="color:red" id="y" class="red"></span>
+      </p>
+      <p class="field">
+        <input type="password" id="password" name="password" placeholder="poster_path">
+        <span style="color:red" id="a"></span>
+      </p>
+      <p class="field">
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="popularity">
+        <span style="color:red" id="b"></span>  
+    </p>
+      <p class="field">
+        <input type="text" id="email" name="email" placeholder="release_data">
+        <span style="color:red" id="u"></span>
+      </p>
+      <p class="field">
+        <select id="select"> <option value="genres">genres</option> </select>
+        <span style="color:red" id="d"></span>
+      </p>
+      <p class="field">
+        <input type="text" id="average" name="average" placeholder="vote_average">
+        <span style="color:red" id="t"></span>
+      </p>
+      <p class="field">
+        <input type="text" id="count" name="count" placeholder="vote_count">
+        <span style="color:red" id="z"></span>
+      </p>
+      <p class="field">
+        <input type="checkbox" checked value ="abult">
+        <span style="color:red" id="s"></span>
+      </p>
+      <p class="submit">
+        <input id="submit" type="submit" value="Add">
+        <input type="reset" value="Clear">
+
+      </p>
+    </form>
+</div>
+    <script src="../js/i5.js"></script>
+  </body>
+</html>
